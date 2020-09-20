@@ -22,7 +22,6 @@ body {
 
 main {
 	max-width: 1440px;
-	min-width: 375px;
 	margin: 0 auto;
 	display: grid;
 	height: 96%;
@@ -35,7 +34,7 @@ main {
 
 .hero {
 	display: grid;
-	grid-template-columns: repeat(2, 50%);
+	grid-template-columns: repeat(2, auto);
 	align-content: center;
 }
 
@@ -94,6 +93,7 @@ main {
 	display: flex;
 	margin-top: 5rem;
 	width: 100%;
+	justify-content: space-around;
 }
 
 .customer-card {
@@ -112,8 +112,8 @@ main {
 
 .customer-card:nth-of-type(2) {
 	margin-top: 1rem;
-	margin-left: 2rem;
-	margin-right: 2rem;
+	/* margin-left: 2rem; */
+	/* margin-right: 2rem; */
 }
 
 .customer-card:nth-of-type(3) {
@@ -160,4 +160,115 @@ main {
 	-moz-border-radius: 50%;
 	-ms-border-radius: 50%;
 	-o-border-radius: 50%;
+}
+
+@media only screen and (max-width: 1200px) {
+	.customer-card {
+		width: 220px;
+	}
+
+	.hero-main--title {
+		font-size: 35px;
+	}
+
+	.hero-main--subtitle {
+		font-size: 14px;
+	}
+
+	.hero-reviews--card:nth-of-type(1) {
+		margin-top: 0rem;
+		margin-left: 0rem;
+	}
+	.hero-reviews--card:nth-of-type(2) {
+		margin-top: 1rem;
+		margin-left: 2rem;
+	}
+
+	.hero-reviews--card:nth-of-type(3) {
+		margin-top: 1rem;
+		margin-left: 4rem;
+	}
+
+	.hero-reviews--card-text {
+		font-size: 12px;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+	.hero {
+		display: grid;
+		grid-template-columns: repeat(1, auto);
+		align-content: center;
+		justify-content: center;
+	}
+
+	.hero-reviews--card:nth-of-type(1) {
+		margin-top: 1rem;
+		margin-left: 0rem;
+	}
+	.hero-reviews--card:nth-of-type(2) {
+		margin-top: 1rem;
+		margin-left: 0rem;
+	}
+
+	.hero-reviews--card:nth-of-type(3) {
+		margin-top: 1rem;
+		margin-left: 0rem;
+	}
+	.hero-main--title {
+		text-align: center;
+	}
+	.hero-main--subtitle {
+		text-align: center;
+	}
+	.customer {
+		flex-direction: column;
+	}
+	.hero-reviews {
+		justify-self: center;
+	}
+	main {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+	.customer-card {
+		width: 400px;
+	}
+	.customer {
+		align-items: center;
+	}
+	body {
+		background-image: url("/images/bg-pattern-top-desktop.svg");
+		background-repeat: no-repeat;
+		background-position: left top;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.container {
+		padding: 1rem;
+	}
+	.customer-card {
+		width: auto;
+	}
+	.hero-reviews {
+		width: 100%;
+	}
+	.hero-reviews--card {
+		width: auto;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.customer-card {
+		padding: 1.5rem;
+	}
+	.customer {
+		margin-top: 2rem;
+	}
+	.hero-reviews--card {
+		flex-direction: column;
+	}
+	.hero-reviews--card-text {
+		margin-top: 0.5rem;
+	}
 }
