@@ -237,6 +237,9 @@ main {
 	.customer {
 		align-items: center;
 	}
+	.customer-card:nth-of-type(3) {
+		margin-top: 1rem;
+	}
 	body {
 		background-image: url("/images/bg-pattern-top-desktop.svg");
 		background-repeat: no-repeat;
